@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skillers</title>
+    <link rel="stylesheet" href="./fontawesome-free-6.1.1-web/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/b298f4f13f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <div id="nav-header">
+            <img src="./images/icon-menu.svg" alt="menu" id="menu" onclick="pressSideMenu()">
+            <img src="./images/logo.jpg" alt="logo" class="head-img">
+            <h1>skillers</h1>
+            <img src="./images/search-mobile.svg" alt="search" id="search-button-mobile" onclick="pressSearch()">
+        </div>
+        <div id="search-space-mobile">
+            <input type="search" name="searchm" id="search-bar-mobile" placeholder="What do you want to learn?">
+        </div>
+        <div id="nav-links">
+            <a href="#">
+                <div class="image active">
+                    <i class="fa-solid fa-graduation-cap"></i> My class
+                </div>
+            </a>
+            <a href="#">
+                <div class="image">
+                    <i class="fa-solid fa-chart-simple"></i> Progress
+                </div>
+            </a>
+            <a href="#">
+                <div class="image">
+                    <i class="fa-regular fa-envelope"></i> Messages
+                </div>
+            </a>
+            <a href="#">
+                <div class="image">
+                    <i class="fa-regular fa-circle-play"></i> All courses
+                </div>
+            </a><a href="#">
+                <div class="image">
+                    <i class="fa-solid fa-gear"></i> Settings
+                </div>
+            </a>
+            <i class="fa-solid fa-xmark" onclick="pressClose()"></i>
+
+            <div class="base">
+                <i class="fa-brands fa-apple"></i>
+                <i class="fa-brands fa-google-play"></i>
+                <div class="base-text">
+                    <div>Download our mobile app</div>
+                    <img src="./images/arrow.svg" alt="arrow" class="arrow">
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="main">
+        <header>
+            <div class="topbar">
+                <h2>
+                    Welcome back, Geeky Coder! <br>
+                </h2>
+                <p class="week">You're doing great this week. Keep it up!</p>
+            </div>
+            <form action="" id="search">
+                <input type="search" name="search" id="search-bar" placeholder="What do you want to learn?">
+                <button type="submit" class="button"><img src="./images/search.svg" alt="search"
+                        class="search-button"></button>
+            </form>
+            <a href="https://twitter.com/_GeekyCoder_" target="_blank">
+                <img src="./images/favicon.png" alt="profile" class="profile">
+            </a>
+        </header>
+        <article>
+            <section class="section1">
+                <div class="statistics">
+                    <h3>Statsitics</h3>
+                    <div class="statistics-left" id="statistics-left">
+                        <div class="statistics-sub">
+                            <h1>2</h1> <br>Courses<br>completed
+                        </div>
+                        <div class="statistics-sub">
+                            <h1>4</h1> <br>Courses<br>in progress
+                        </div>
+                        <div class="statistics-sub">
+                            <span>
+
+                                <h1>7.5</h1> <br>Hours spent<br>this week
+                            </span>
+                            <img src="./images/chart.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="aside">
+                    <audio id="myAudio" loop>
+                        <source src="./images/The_Rumbling_(TV_Size)(128k).mp3" type="audio/mpeg">
+                    </audio>
+                    <audio id="myAudio2" loop>
+                        <source src="./images/audio.mp3" type="audio/mpeg">
+                    </audio>
+                    <audio id="myAudio3" loop>
+                        <source src="./images/Arcane.mp3" type="audio/mpeg">
+                    </audio>
+                    <h3>Continue to watch</h3>
+                    <button class="lt" onclick="moveLeftTop()">
+                        <i class="fa-solid fa-less-than"></i>
+                    </button>
+                    <button class="gt" onclick="moveRightTop()">
+                        <i class="fa-solid fa-greater-than"></i>
+                    </button>
+                    <div id="continue">
+                        <button type="submit" id="arrow-left" onclick="pressLeftMobile()">
+                            <img src="./images/arrow-left.svg" alt="arrow-left">
+                        </button>
+                        <div class="continue-group">
+                            <div class="continue-one">
+                                <div class="topright">Mobile app designs</div>
+                                <button class="play" id="playBorder" onkeypress="pressPlay()">
+                                    <img src="./images/play.svg" alt="play" ondblclick="doublePressPlay() "
+                                        onclick="pressPlay()" id="play">
+                                    <img src="./images/pause.svg" alt="pause" onclick="pressPlay()" id="pause"
+                                        ondblclick="doublePressPlay()">
+                                </button>
+                                <!-- <p id="prototype">Prototyping and Testing <br> <span class="min">35 min</span></p> -->
+                                <p id="prototype">The Rumbling<br> <span class="min">02 min</span></p>
+                            </div>
+                            <div class="continue-two">
+                                <button class="play" id="playBorder2" onkeypress="pressPlay2()">
+                                    <img src="./images/play.svg" alt="play" onclick="pressPlay2()"
+                                        ondblclick="doublePressPlay2()" id="play2">
+                                    <img src="./images/pause.svg" alt="pause" onclick="pressPlay2()"
+                                        ondblclick="doublePressPlay2()" id="pause2">
+                                </button>
+                                <!-- <p id="finding">Finding your style<br> <span class="min">24 min</span></p> -->
+                                <p id="finding">Attack on Titan Opening 1<br> <span class="min">02 min</span></p>
+                            </div>
+                            <div class="continue-three">
+                                <button class="play" id="playBorder3" onkeypress="pressPlay3()">
+                                    <img src="./images/play.svg" alt="play" onclick="pressPlay3()"
+                                        ondblclick="doublePressPlay3()" id="play3">
+                                    <img src="./images/pause.svg" alt="pause" onclick="pressPlay3()"
+                                        ondblclick="doublePressPlay3()" id="pause3">
+                                </button>
+                                <p id="arcane">Arcane: League of Legends<br> <span class="min">01 min</span></p>
+                            </div>
+                        </div>
+                        <button type="submit" id="arrow-right" onclick="pressRightMobile()">
+                            <img src="./images/arrow-right.svg" alt="arrow-right">
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="section2">
+                <div class="courses">
+                    <h3>Your courses</h3>
+                    <div id="courses-sub">
+                        <div class="courses-sub1">
+                            <div class="courses-sub-header">
+                                <h2>Mobile app design</h2>
+                                <p class="studio">by Simple studio</p>
+                                <div class="twenty-six">26%</div>
+                                <img src="./images/mobile-app.jpg" alt="mobile-app" class="mobile-app-img">
+                            </div>
+                            <div class="courses-sub-base courses-sub1-base">
+                                <p>12/45 lessons</p>
+                                <p class="courses-sub-base-tasks">4/15 tasks</p>
+                            </div>
+                            <img src="./images/arrow1.svg" alt="arrow" class="arrow-courses">
+                        </div>
+                        <div class="courses-sub1 courses-sub2">
+                            <div class="courses-sub-header">
+                                <h2>Illustration</h2>
+                                <p class="studio">by Mia Anderson</p>
+                                <div class="twenty-six sixty-five">65%</div>
+                                <img src="./images/illustration.jpg" alt="illustration" class="illustration">
+                            </div>
+                            <div class="courses-sub-base courses-sub2-base">
+                                <p>24/37 lessons</p>
+                                <p class="courses-sub-base-tasks">8/12 tasks</p>
+                            </div>
+                            <img src="./images/arrow1.svg" alt="arrow" class="arrow-courses">
+                        </div>
+
+                        <div class="courses-sub1 courses-sub3">
+                            <div class="courses-sub-header">
+                                <h2>UX/UI design</h2>
+                                <p class="studio">by Horizon</p>
+                                <div class="twenty-six hundred">100%</div>
+                                <!-- <img src="./images/UX-UI.jpg" alt="UX-UI" class="illustration"> -->
+                            </div>
+                            <div class="courses-sub-base courses-sub3-base">
+                                <p>51/51 lessons</p>
+                                <p class="courses-sub-base-tasks">17/17 tasks</p>
+                            </div>
+                            <img src="./images/arrow1.svg" alt="arrow" class="arrow-courses">
+                        </div>
+                    </div>
+                </div>
+                <div class="aside">
+                    <button class="lt" onclick="moveLeft()"><i class="fa-solid fa-less-than"></i></button>
+                    <button class="gt" onclick="moveRight()"><i class="fa-solid fa-greater-than"></i></button>
+                </div>
+            </section>
+        </article>
+    </div>
+    <footer>
+        <div class="logo">
+            <img src="./images/logo.jpg" alt="logo">
+            <h1>skillers</h1>
+        </div>
+        <div class="social-links">
+            <a href="https://facebook.com/lawal.toyyib.7"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/_GeekyCoder_"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/_geeky_coder_"></a><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div>
+            <p>&copy; Geeky Coder, All right reserved</p>
+            <p><a href="#">Terms and Agreement</a> <a href="#">Privacy Policy</a></p>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
