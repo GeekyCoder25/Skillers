@@ -125,22 +125,26 @@ function moveRightTop(){
     let x = document.getElementById('continue');
     let statistics = document.getElementById('statistics-left')
     
-    x.style.transition = 'transform 0.5s linear'
-    statistics.style.transition = 'transform 0.5s linear'
+    x.style.transition = 'transform 0.5s linear';
+    statistics.style.transition = 'transform 0.5s linear';
+    continue_one[0].style.display = "block";
+    continue_two[0].style.display = "block";
+    continue_three[0].style.display = "block";
+    
     
     if (index === "mine" || x.style.transform === 'translateX(0px)') {
         x.style.transform = 'translateX(-10vw)';
-        statistics.style.transform = 'translateX(-10vw)'
-        index = "mine2"
+        statistics.style.transform = 'translateX(-10vw)';
+        index = "mine2";
     }
     else{
-        statistics.style.transform = 'translateX(-20vw)'
-        x.style.transform = 'translateX(-20vw)'
+        statistics.style.transform = 'translateX(-20vw)';
+        x.style.transform = 'translateX(-20vw)';
     }
 }
 function moveLeftTop(){
     let x = document.getElementById('continue');
-    let statistics = document.getElementById('statistics-left')
+    let statistics = document.getElementById('statistics-left');
     
     if (x.style.transform === 'translateX(-20vw)') {
         x.style.transform = 'translateX(-10vw)';
@@ -150,17 +154,22 @@ function moveLeftTop(){
         statistics.style.transform = 'translateX(0px)';
         x.style.transform = 'translateX(0px)';
     }
+    else {
+        continue_one[0].style.display = "block";
+        continue_two[0].style.display = "block";
+        continue_three[0].style.display = "block";
+    }
 }
 function moveRight(){
     let x = document.getElementById('courses-sub');
     
-    x.style.transition = 'transform 0.3s linear'
-    x.style.transform = 'translateX(-10vw)' 
+    x.style.transition = 'transform 0.3s linear';
+    x.style.transform = 'translateX(-10vw)';
 }
 function moveLeft(){
     let x = document.getElementById('courses-sub');
 
-    x.style.transform = 'translateX(0px)'
+    x.style.transform = 'translateX(0px)';
 }
 
 let search = document.getElementById('search-space-mobile')
@@ -265,7 +274,7 @@ let width = screen.width;
 let height = screen.height; 
 
 window.onload = function() {
-    if (width <= 600 && height >= 1200){
+    if (width <= 600 && height >= 1000){
         console.log(screen.width);
         console.log(screen.height);
         continue_one[0].style.display = "block"

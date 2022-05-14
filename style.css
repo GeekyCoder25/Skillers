@@ -12,6 +12,7 @@ body {
   position: relative;
   overflow-x: hidden;
 }
+/* Navbar */
 nav {
   position: absolute;
   left: 0.3rem;
@@ -97,6 +98,8 @@ nav #nav-links a:nth-child(1) {
 .arrow {
   width: 30%;
 }
+/* Navbar End */
+/* Header */
 #main {
   position: relative;
   top: 0.5rem;
@@ -159,6 +162,8 @@ header .profile {
 header a {
   margin: 0 3% 0 20px;
 }
+/* Header End */
+/* Article */
 article h3 {
   display: inline-block;
   font-size: 1vw;
@@ -269,17 +274,14 @@ article h3 {
   cursor: pointer;
   display: flex;
   align-items: center;
-}
-#pause,
-#pause2,
-#pause3 {
-  display: none;
-  padding: 0.1vw;
-}
-#continue div button img {
-  width: 100%;
-  align-items: center;
   justify-content: center;
+}
+#continue div button i {
+  font-size: 1vw;
+}
+#continue div button i:nth-child(2){
+  display: none;
+  font-size: 1.5vw;
 }
 #continue p {
   margin-top: 5%;
@@ -417,6 +419,11 @@ article h3 {
 .courses-sub3-base {
   background: linear-gradient(to right, #95afea, #f5b196);
 }
+/* Article End */
+/* Footer */
+footer{
+  display: none;
+}
 @media screen and (max-width: 600px) {
   body {
     position: relative;
@@ -427,6 +434,7 @@ article h3 {
     overflow-x: hidden;
     overflow-y: unset;
   }
+  /* Navbar */
   nav {
     position: fixed;
     background: #8470dd;
@@ -451,6 +459,14 @@ article h3 {
     height: 100%;
     display: none;
     z-index: 3;
+  }
+  @keyframes navlinks {
+    from {
+      transform: translateX(-100vw);
+    }
+    to {
+      transform: translateX(0);
+    }
   }
   nav #nav-links .fa-xmark {
     font-size: 10vw;
@@ -682,11 +698,13 @@ article h3 {
     height: 28vw;
     margin: 10% 0 0 25%;
   }
-  #pause,
-  #pause2,
-  #pause3 {
-    padding: 2.5vw;
-  }
+ #continue div button i {
+  font-size: 10vw;
+}
+#continue div button i:nth-child(2){
+  display: none;
+  font-size: 13vw;
+}
   #continue p {
     font-size: 4vw;
   }
@@ -727,7 +745,9 @@ article h3 {
     width: 10vw;
     height: 9.2vw;
   }
+  /* Footer */
   footer {
+    display: block;
     margin-top: 5%;
     background-color: #8470dd;
     padding: 10% 5% 5% 5% ;
@@ -760,14 +780,6 @@ article h3 {
     text-align: center;
     text-decoration: none;
     color: #000;
-
   }
-  @keyframes navlinks {
-    from {
-      transform: translateX(-100vw);
-    }
-    to {
-      transform: translateX(0);
-    }
-  }
+  /* Footer End */
 }
