@@ -417,7 +417,12 @@ article h3 {
 .courses-sub3-base {
   background: linear-gradient(to right, #95afea, #f5b196);
 }
-@media screen and (max-width: 600px) {
+footer {
+  display: none;
+}
+
+
+@media screen and (madth: 600px) {
   body {
     position: relative;
     padding: 0;
@@ -732,6 +737,7 @@ article h3 {
     background-color: #8470dd;
     padding: 10% 5% 5% 5% ;
     position: relative;
+    display: block;
   }
   footer .logo{
     display: flex;
