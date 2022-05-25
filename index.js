@@ -1,6 +1,3 @@
-window.onresize = function () {
-    location.reload();
-}
 let play = document.getElementById('play');
 let pause = document.getElementById('pause');
 let play2 = document.getElementById('play2');
@@ -286,7 +283,15 @@ function pressRightMobile() {
         playBorder3.style.borderStyle = "solid";
     }
 }
+
 let width = screen.width;
 let height = screen.height;
-// location.reload()
-alert('Switch between dektop view and mobile view to see the changes and responsiveness \nYour screen width is ' + width + "\nYour screen height is " + height);
+window.onload = function () {
+    alert('Switch between dektop view and mobile view to see the changes and responsiveness \nYour screen width is ' + width + "\nYour screen height is " + height);
+}
+
+if (width > 768) {
+    window.onresize = function () {
+        location.reload();
+    }
+}

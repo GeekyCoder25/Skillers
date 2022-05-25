@@ -137,6 +137,7 @@ header #search-bar {
   border-radius: 1vw 0 0 1vw;
   border: #fff;
   padding: 5% 5%;
+  outline: none;
 }
 button {
   cursor: pointer;
@@ -275,6 +276,7 @@ article h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+  outline: none;
 }
 #continue div button i {
   font-size: 1vw;
